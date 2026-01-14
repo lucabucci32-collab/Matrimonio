@@ -11,87 +11,127 @@
             margin: 0;
             padding: 0;
             font-family: 'Playfair Display', serif;
-            background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.3)), 
+            /* Sfondo ottimizzato per visibilità */
+            background: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)), 
                         url('https://png.pngtree.com/background/20250306/original/pngtree-watercolor-floral-frame-with-gold-accents-for-wedding-invitation-background-picture-image_16294205.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #4a5568;
             text-align: center;
             min-height: 100vh;
+            /* Crea spazio per vedere lo sfondo sopra e sotto */
+            padding: 40px 0;
         }
 
         .container {
             background: rgba(255, 255, 255, 0.96);
             padding: 60px 40px;
             border-radius: 30px;
-            max-width: 800px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+            /* Larghezza ridotta per creare l'effetto cornice ai lati */
+            max-width: 85%;
+            width: 650px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
             border: 2px solid #d4af37;
-            margin: 40px auto;
+            margin: 0 auto;
         }
 
         h1 {
-            font-size: clamp(48px, 8vw, 72px);
+            font-size: clamp(45px, 8vw, 70px);
             color: #5d8aa8;
             margin-bottom: 10px;
             font-family: 'Great Vibes', cursive;
+            letter-spacing: 1px;
         }
 
         h2 {
-            font-size: 26px;
+            font-size: 24px;
             color: #b0c4de;
             margin-top: 0;
             margin-bottom: 30px;
             font-weight: normal;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
 
         .quote {
             font-size: 20px;
-            font-style: normal;
             color: #4a5568;
             margin: 30px 0;
             padding: 20px;
             border-top: 1px solid #d4af37;
             border-bottom: 1px solid #d4af37;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .details {
-            font-size: 19px;
+            font-size: 18px;
             margin: 30px 0;
-            padding: 30px;
-            background: rgba(93, 138, 168, 0.05);
+            padding: 25px;
+            background: rgba(93, 138, 168, 0.04);
             border-radius: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        .map-box { margin: 20px 0; }
-        
+        .map-box {
+            margin: 20px 0;
+        }
+
         iframe {
             width: 100%;
             height: 250px;
-            border-radius: 10px;
+            border-radius: 12px;
             border: 1px solid #d4af37;
+            background: #eee;
         }
 
         .rsvp-btn {
             display: inline-block;
             background-color: #5d8aa8;
             color: white !important;
-            padding: 18px 40px;
+            padding: 18px 35px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
             font-size: 18px;
             margin: 20px 0;
-            transition: 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(93, 138, 168, 0.3);
         }
 
-        .rsvp-btn:hover { transform: scale(1.05); background-color: #4a6e8a; }
+        .rsvp-btn:hover {
+            transform: scale(1.05);
+            background-color: #4a6e8a;
+        }
 
-        .contacts { margin-top: 20px; font-size: 17px; }
+        .contacts {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
 
+        .contacts a {
+            color: #5d8aa8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 30px 0;
+        }
+
+        /* Ottimizzazione Mobile */
         @media (max-width: 600px) {
-            .container { margin: 15px; padding: 30px 15px; }
+            body {
+                background-attachment: scroll; /* Migliore resa su smartphone */
+                padding: 20px 0;
+            }
+            .container {
+                padding: 40px 20px;
+                max-width: 88%; /* Cornice laterale visibile */
+            }
+            h1 { font-size: 48px; }
+            .details { padding: 15px; }
         }
     </style>
 </head>
@@ -102,7 +142,7 @@
     <h2>14 Giugno 2026</h2>
 
     <div class="quote">
-        Siamo felici di condividere con voi il giorno del nostro matrimonio.
+        Siamo felici di condividere con voi<br>il giorno del nostro matrimonio.
     </div>
 
     <p>Vi aspettiamo per festeggiare insieme questo momento.</p>
@@ -113,30 +153,39 @@
         Piazza del Popolo 10, Cesena (FC)</p>
         
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.428570535308!2d12.240742176652495!3d44.136369071082695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4be66e85741%3A0xc3f6d713a290130e!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2861.940822165082!2d12.2407421768406!3d44.1360980209689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca4d01b13867b%3A0xc34a180f68d660e4!2sPiazza%20del%20Popolo%2C%2010%2C%2047521%20Cesena%20FC!5e0!3m2!1sit!2sit!4v1710000000000!5m2!1sit!2sit" 
+                allowfullscreen="" loading="lazy"></iframe>
         </div>
 
-        <hr style="border:0; height:1px; background:#d4af37; opacity:0.3; margin:30px 0;">
+        <hr>
 
         <p><strong>Ricevimento</strong><br>
         Ristorante Castello di Montenovo<br>
         Via Castello Montenovo 74, Montiano (FC)</p>
 
         <div class="map-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.135682855217!2d12.304415376660995!3d44.1068417710852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca309079a4079%3A0x280e2272e512419d!2sRistorante%20Castello%20di%20Montenovo!5e0!3m2!1sit!2sit!4v1700000000000!5m2!1sit!2sit"
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.06733271297!2d12.302521976838334!3d44.09217652382173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ca849f4859873%3A0x8898991f9b349f7b!2sRistorante%20Castello%20di%20Montenovo!5e0!3m2!1sit!2sit!4v1710000000001!5m2!1sit!2sit" 
+                allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 
     <div class="rsvp-section">
         <p>È gradita gentile conferma entro il <strong>30 Aprile 2026</strong></p>
-        <a href="https://forms.gle/PBoC4JuJJPzZSKkR8" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
+        
+        <a href="https://forms.gle/INSERISCI_IL_TUO_LINK" class="rsvp-btn" target="_blank">CONFERMA LA TUA PRESENZA</a>
         
         <div class="contacts">
-            <p>Info e WhatsApp:</p>
-            <p>Luca: 340 737 5613<br>
-            Roberta: 328 289 3816</p>
+            <p>Info e WhatsApp:<br>
+            Luca: <a href="https://wa.me/393407375613">340 737 5613</a><br>
+            Roberta: <a href="https://wa.me/393282893816">328 289 3816</a></p>
         </div>
     </div>
+
+    <p style="margin-top: 50px; font-style: italic; color: #5d8aa8;">
+        Non vediamo l'ora di festeggiare con voi! 💙✨
+    </p>
 </div>
 
 </body>
